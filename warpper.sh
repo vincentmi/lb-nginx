@@ -1,7 +1,7 @@
 #!/bin/sh
 
 echo 'Nginx starting ...';
-/usr/sbin/nginx -s start
+/usr/sbin/nginx
 echo 'Nginx done'
 
 echo 'Consul-template starting...'
