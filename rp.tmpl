@@ -10,8 +10,8 @@ server {
     listen 80;
     server_name  {{$serverDomain}};
 
-    access_log  logs/{{$serverName}}.log  main;
-    error_log  logs/{{$serverName}}.error.log;
+    #access_log  logs/{{$serverName}}.log  main;
+    #error_log  logs/{{$serverName}}.error.log;
     root   html;
     index  index.html index.htm index.php;
 
