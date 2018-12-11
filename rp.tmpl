@@ -1,4 +1,4 @@
-{{range services}} {{ if .Tags | contains "lb-nginx" }} {{$serverDomain := .Name | replaceAll "_" "." }} 
+{{range services}} {{ if .Tags | contains "lb-nginx" }} {{$serverDomain := .Name |regexReplaceAll "(.+?)(-[0-9]+)?" "$1"  | replaceAll "_" "." }} 
 {{$serviceName := .Name}}
 {{$serverList := service $serviceName}}
 
